@@ -1,0 +1,83 @@
+﻿#toolBarTitle {
+    position: absolute;
+    z-index: 2000;
+    top: 6px;
+    left: 10px;
+}
+
+    #toolBarTitle h3 {
+        display: inline-block;
+    }
+
+    #toolBarTitle progress {
+        margin-left: 5px;
+    }
+
+.win-toolbar-actionarea {
+    background-color: rgb(220, 225, 240) !important;
+}
+
+section[role=main] {
+    height: calc(100vh - 48px);
+    overflow-y: auto;
+}
+
+#postArea {
+    width: calc(100% - 8px);
+}
+
+    #postHead {
+        margin: 16px 18px 12px;
+    }
+
+    #postHead #postDetail {
+        margin-top: 8px;
+    }
+
+        #postHead .user_info {
+            display: inline-block;
+            margin: 0;
+        }
+
+        #postHead .post_info {
+            display: inline-block;
+            float: right;
+            margin: 0;
+            color: rgb(96, 96, 96);
+        }
+
+    #postContents {
+        margin: 0 8px;
+        padding: 18px 10px;
+        border-top: 2px solid rgb(238, 238, 238);
+        border-bottom: 2px solid rgb(238, 238, 238);
+    }
+
+        #postContents p {
+                margin: 0;
+                font-size: 15px;
+                font-weight: 400;
+            }
+
+        #postContents img {
+                width: 100%;
+                max-width: 640px;
+            }
+
+    #replys {
+        margin: 15px;
+    }
+
+        #replys div {
+            margin: 20px 0;
+            border-left: 4px solid rgb(238, 238, 238);
+            padding-left: 10px;
+        }
+
+        #replys div.daDatGul {
+            margin-left: 25px;
+        }
+
+        #replys p {
+            margin: 7px 0 0;
+        }

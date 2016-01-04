@@ -1,0 +1,59 @@
+﻿#toolBarTitle {
+    position: absolute;
+    z-index: 2000;
+    top: 6px;
+    left: 10px;
+}
+
+    #toolBarTitle h3,
+    #toolBarTitle h4 {
+        display: inline-block;
+    }
+
+    #toolBarTitle h4 {
+        margin-left: 5px;
+        color: rgb(85, 85, 85);
+        font-weight: 300;
+    }
+
+.win-toolbar-actionarea {
+    background-color: rgb(220, 225, 240) !important;
+}
+
+section[role=main] {
+    height: calc(100vh - 48px);
+}
+
+#listView-posts {
+    height: inherit;
+}
+
+    #listView-posts .win-itemscontainer {
+        width: calc(100% + 8px);
+    }
+
+    #listView-posts .win-container {
+        margin-top: 8px;
+    }
+
+    #listView-posts .list-item {
+        margin: 6px;
+    }
+
+    #listView-posts .list-item h4 {
+        font-size: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+        #listView-posts #rep {
+            position: relative;
+            top: -4px;
+            font-size: 15px;
+            color: rgb(96, 96, 96);
+        }
+
+    #listView-posts .list-item div {
+        margin-top: 3px;
+    }

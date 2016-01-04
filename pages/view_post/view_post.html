@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>view_post</title>
+
+    <!-- WinJS 참조 -->
+    <link href="/WinJS/css/ui-light.css" rel="stylesheet" />
+    <script src="/WinJS/js/base.js"></script>
+    <script src="/WinJS/js/ui.js"></script>
+
+    <link href="view_post.css" rel="stylesheet" />
+    <script src="view_post.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header class="page-header" role="banner">
+            <div id="toolBarTitle">
+                <h3 class="win-h3" id="disp-currentBoard"></h3>
+                <progress class="win-ring"></progress>
+            </div>
+            <div data-win-control="WinJS.UI.ToolBar"
+                 aria-label="도구 막대"></div>
+        </header>
+        <section id="section_main" role="main" style="opacity: 0">
+            <div id="postArea">
+                <div id="postHead">
+                    <h4 id="postSubject" class="win-h4" aria-label="제목"></h4>
+                    <div id="postDetail"></div>
+                </div>
+                <div id="postContents" aria-label="본문">
+                    <div id="postImgs"></div>
+                    <article id="postArticle"></article>
+                </div>
+                <div id="replys" aria-label="댓글"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

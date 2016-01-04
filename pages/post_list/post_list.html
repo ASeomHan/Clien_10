@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>post_list</title>
+
+    <!-- WinJS 참조 -->
+    <link href="/WinJS/css/ui-light.css" rel="stylesheet" />
+    <script src="/WinJS/js/base.js"></script>
+    <script src="/WinJS/js/ui.js"></script>
+
+    <link href="post_list.css" rel="stylesheet" />
+    <script src="post_list.js"></script>
+</head>
+<body>
+    <!-- 리스트뷰 템플릿 정의 -->
+    <div id="postList-template" data-win-control="WinJS.Binding.Template">
+        <div class="list-item">
+            <a class="link-viewPost">
+                <h4 class="win-h4">
+                    <span data-win-bind="innerHTML: subject"></span>
+                    <span id="rep" data-win-bind="innerHTML: repCount"></span>
+                </h4>
+                <div data-win-bind="innerHTML: nickname"></div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 메인 영역 -->
+    <div id="wrapper">
+        <header class="page-header" role="banner">
+            <div id="toolBarTitle">
+                <h3 class="win-h3" id="disp-currentBoard"></h3>
+                <h4 class="win-h4" id="disp-currentPage"></h4>
+            </div>
+            <div data-win-control="WinJS.UI.ToolBar"
+                 aria-label="도구 막대">
+                <button data-win-control="WinJS.UI.Command"
+                        data-win-options="{
+                            label: '게시판 선택',
+                            icon: 'allapps',
+                            type: 'flyout',
+                            flyout: select('#boardSelectFlyout') }">
+                </button>
+                <button id="cmd-prevPage"
+                        data-win-control="WinJS.UI.Command"
+                        data-win-options="{
+                            label: '이전 페이지',
+                            icon: 'back',
+                            type: 'button',
+                            disabled: true }">
+                </button>
+                <button id="cmd-nextPage"
+                        data-win-control="WinJS.UI.Command"
+                        data-win-options="{
+                            label: '다음 페이지',
+                            icon: 'forward',
+                            type: 'button' }">
+                </button>
+            </div>
+            <div id="boardSelectFlyout" data-win-control="WinJS.UI.Menu">
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'park',
+                            label: '모두의공원',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'kin',
+                            label: '아무거나질문',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'news',
+                            label: '새로운소식',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'lecture',
+                            label: '팁과강좌',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'use',
+                            label: '사용기게시판',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'chehum',
+                            label: '체험단사용기',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'jirum',
+                            label: '알뜰구매',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'coupon',
+                            label: '쿠폰/이벤트',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'useful',
+                            label: '유용한사이트',
+                            type: 'toggle' }">
+                </button>
+                <button class="boardSel"
+                        data-win-control="WinJS.UI.MenuCommand"
+                        data-win-options="{
+                            id: 'pds',
+                            label: '자료실',
+                            type: 'toggle' }">
+                </button>
+            </div>
+        </header>
+        <section id="section_main" role="main">
+            <div id="listView-posts"
+                 class="win-selectionstylefilled"
+                 aria-label="게시글 목록">
+            </div>
+        </section>
+    </div>
+</body>
+</html>
